@@ -1,9 +1,7 @@
 import re
 from datetime import date
 
-# ----------------------------
 # small helpers
-# ----------------------------
 def lev(a, b):
     # keep a as longer string (tiny speed win)
     if len(a) < len(b):
@@ -35,7 +33,7 @@ def save_log(lines, fn="m25mac001_prob1.log"):
 
 
 def parse_dob(s):
-    # month name -> number
+    # month name :number
     mon = {
         "january": 1, "jan": 1,
         "february": 2, "feb": 2,
@@ -77,7 +75,7 @@ def parse_dob(s):
         elif b > 12:
             mm, d = a, b
         else:
-            # both possible -> assume mm-dd (common)
+            # both possible : assume mm-dd
             mm, d = a, b
         return d, mm, y
 
@@ -131,9 +129,7 @@ def surname(full):
     return parts[-1] if len(parts) >= 2 else None
 
 
-# ----------------------------
 # chatbot
-# ----------------------------
 def chat():
     log = []
     state = "name"
