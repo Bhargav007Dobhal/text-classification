@@ -11,9 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# -------------------------
 # SIMPLE CLASSIFIER PIPE
-# -------------------------
 class DocClf:
     def __init__(self, path=None):
         self.path = path
