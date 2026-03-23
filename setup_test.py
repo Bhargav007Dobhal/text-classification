@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
 import sys, os, re
 
-# ------------------------
 # basic import check
-# ------------------------
 def chk_imports():
     print("Checking packages...\n")
 
@@ -36,9 +33,7 @@ def chk_imports():
     return True
 
 
-# ------------------------
 # sklearn models
-# ------------------------
 def chk_models():
     print("\nTesting ML models...\n")
     try:
@@ -59,9 +54,8 @@ def chk_models():
         return False
 
 
-# ------------------------
+
 # text + tfidf
-# ------------------------
 def chk_text():
     print("\nTesting text pipeline...\n")
     try:
@@ -88,9 +82,7 @@ def chk_text():
         return False
 
 
-# ------------------------
 # kaggle check
-# ------------------------
 def chk_kaggle():
     print("\nChecking Kaggle config...\n")
     p = os.path.expanduser("~/.kaggle/kaggle.json")
@@ -105,9 +97,8 @@ def chk_kaggle():
         return False
 
 
-# ------------------------
+
 # main
-# ------------------------
 def main():
     print("="*45)
     print("SETUP TEST : SPORTS vs POLITICS")
